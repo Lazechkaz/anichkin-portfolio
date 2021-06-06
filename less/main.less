@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+body{
+	background-color: #ffff;
+	font-family: Poppins, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+ width: 100%;
+}
+/* Typography */
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+div{
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+a,
+:before,
+:after {
+  transition: 0.2s;
+}
+h3{
+	font-size: 25px;
+}
+section{
+  display: block;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+li:last-child{
+	margin-right: 0px;
+}
+/*---------------Navigation panel---------*/
+.nav-item{
+	margin-right: 30px;
+	padding: 10px;
+	
+	a {
+		text-decoration: none;
+		color: #262626;
+		position: relative;
+		z-index: 9;
+	}
+}
+.nav-item a:before{
+	content: '';
+ transition: 0.4s;
+ color: #FEC62E;
+ position: absolute;
+ top: 35%;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ width: 0;
+ overflow: hidden;
+ z-index: -1;
+}
+.nav-item a:hover:before{
+ background-color: #FEC62E;
+ transform: skew(-15deg);
+ z-index: -1;
+ width: 100%;
+ transition: 0.4s;
+}
+/*---------------Navigation panel-------------*/
+
+/*---------------Main-------------*/
+canvas{
+	z-index: 0;
+	display: block;
+ width: 100%;
+ height: 100%;
+ background: transparent;
+ position: absolute;
+ left: 0;
+ top: 0;
+}
+.main{
+	
+ /*height: 100vh;
+ width: 100%;*/
+/*	background: url(../img/bg.png) no-repeat center 50%/cover;
+*/}
+#head{
+	padding: 150px 0px;
+}
+.main-text h2{
+	font-size: 30px;	
+}
+.main-text p{
+		font-weight:600;
+		font-size: 34px;
+	}
+.main-text span{
+	position: relative;
+	overflow: hidden;
+	transform: skew(20deg);
+}
+.main-text span:before{
+	content: '';
+	position: absolute;
+	z-index: -1;
+ top: 35%;
+ bottom: 0;
+ width: 100%;
+ height: 70%;
+ background-color: #FEC62E;
+	transform: skew(-20deg);
+}
+.sub-text{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	h4{
+		font-size: 25px;
+	}
+	p{
+		font-size: 18px;
+		font-weight: 600;
+		padding-top:15px;
+	}
+	:nth-child(2){
+		padding-top:25px;
+	}
+}
+#strip { 
+	display: inline-block;
+ width: 30px;
+ height: 9px;
+ background: #FEC62E;
+ transform: skew(-30deg);
+ margin-right: 20px;
+}
+.button{
+	z-index: 9;
+	padding: 10px 40px;
+	display: inline-block;
+	border-radius: 50px;
+	font-size: 20px;
+	font-weight: 500;
+	text-decoration: none;
+}
+.btn-portfolio{
+	color: #262626;
+	border: 2px solid #262626;
+	margin-right: 20px;
+	&:hover{
+		color: #fff;
+		background-color: #262626;
+		transition: 0.4s;
+		text-decoration: none;
+	}
+}
+.btn-about{
+	z-index: 9;
+	color: #262626;
+	background-color:#FEC62E;;
+	margin-top: 10px;
+	padding: 12px 40px;
+	&:hover{
+		color: #FEC62E;
+		background-color: #262626;
+		transition: 0.4s;
+		text-decoration: none;
+	}
+}
+.pic-content img{
+	position:relative;
+	z-index: 9;
+}
+.number-page{
+	font-family: OpenSans, sans-serif;
+	font-weight: 900;
+	transform: skew(-10deg);
+	font-size: 150px;
+	color: #FFF7E0;
+	position:absolute;
+	top: -10%;
+	bottom: 160%;
+}
+.whiteyellow{
+	top: 75%;
+ bottom: 0;
+ right:10%;
+}
+.dark{
+	color: #2C2C2C;
+}
+.social-icons{
+	vertical-align: center;
+	position:absolute;
+	left: 110%;
+	bottom:38%;
+	i{
+		padding-top: 30px;
+		font-size: 25px;
+		color: #797979;
+	}
+	i:hover{
+		color: #FEC62E;
+		transition: 0.1s;
+	}
+}
+#strip-vertical{
+	position:absolute;
+	z-index: 9;
+	display: inline-block;
+ width: 300px;
+ height: 5px;
+ top:45%;
+ left:75%;
+ background: #FEC62E;
+ transform: rotate(90deg) skew(-50deg);
+ margin-right: 20px;
+}
+/*---------------Main-------------*/
+
+/*---------------About-------------*/
+#about{
+	//padding: 100px 0px;
+	padding: 100px 0px;
+	background: linear-gradient(95deg, #262626 50%, transparent 50%);
+}
+.about-rect{
+	h3{
+		position:relative;
+		z-index: 2;
+		color: #FEC62E;
+	}
+	img{
+		margin-top: 80px;
+		position:relative;
+	}
+}
+.about-text{
+	margin-left: 50px;
+	a{
+		color:#FEC62E;;
+	}
+}
+.bg-desc{
+	position:	relative;
+	&:before{
+		content: '';
+		position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+ 	z-index: -1;
+	}
+}
+.trapez-bg:before{
+ bottom: 0%;
+	background: linear-gradient(170deg, #fff 60%, #FDFDFD 40%);
+}
+.trap:before{
+ top: 50%;
+ left: 0%;
+ transform: rotate(10deg);
+ background:url(../img/trapez.png) no-repeat right;
+}
+/*---------------About-------------*/
+
+/*---------------Skills-------------*/
+#skills{
+	padding: 100px 0px;
+	z-index: -2;
+	background: linear-gradient(50deg, transparent 50%, #FDFDFD 50%);
+}
+.semibold{
+	font-weight: 600;
+}
+.padding{
+	padding-top:120px;
+}
+.skill-name{
+	font-size: 18px;
+	padding-top: 15px;
+}
+.skill-descrip{
+	padding-top: 20px;
+}
+.headline{
+	position: relative;
+	overflow: hidden;
+	transform: skew(20deg);
+}
+.headline:before{
+	content: '';
+	position: absolute;
+	z-index: -1;
+ top: 38%;
+ bottom: 0;
+ width: 100%;
+ height: 70%;
+ background-color: #FEC62E;
+	transform: skew(-20deg);
+}
+.blob-bg:before{
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background: url(../img/blob-bg.svg) no-repeat right;
+
+}
+.trap-skill:before{
+	top: 0;
+	z-index: -1;
+	top: 25%;
+	background: url(../img/trap-skill.svg) no-repeat center;
+}
+
+
+    .tabs {
+      font-size: 0;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tabs>input[type="radio"] {
+      display: none;
+    }
+
+    .tabs>div {
+      /* скрыть контент по умолчанию */
+      display: none;
+      border: 1px solid #e0e0e0;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+    #tab-btn-1:checked~#content-1,
+    #tab-btn-2:checked~#content-2,
+    #tab-btn-3:checked~#content-3 {
+      display: block;
+    }
+
+    .tabs>label {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      background-color: #f5f5f5;
+      border: 1px solid #e0e0e0;
+      padding: 2px 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      cursor: pointer;
+      position: relative;
+      top: 1px;
+    }
+
+    .tabs>label:not(:first-of-type) {
+      border-left: none;
+    }
+
+    .tabs>input[type="radio"]:checked+label {
+      background-color: #fff;
+      border-bottom: 1px solid #fff;
+    }
