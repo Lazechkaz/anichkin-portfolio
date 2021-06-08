@@ -18,9 +18,8 @@
 			<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		</head>
 		<body>
-			<canvas id="nokey" width="100%" height="100%">
-    Your Browser Don't Support Canvas, Please Download another ^_^``
-				</canvas>
+
+			<div id="particles-js" class="particles"></div>
 			<main class="main">
 				
 
@@ -28,7 +27,7 @@
 					<nav class="navbar navbar-expand-md navbar-light">
 						<div class="container">
 					  <a class="navbar-brand" href="#">
-					   <img src="/img/logo.svg" width="70" height="70" alt="">
+					   <img src="/img/logo.svg" width="70" height="70" alt="логотипчик">
 					  </a>
 					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
 					    <span class="navbar-toggler-icon"></span>
@@ -101,7 +100,7 @@
 							</div>
 							<div class="col-md-6">
 								<p class="about-text bg-desc trap">
-									Приветствую! Меня зовут Артём:) Я обожаю создавать и придумывать что-нибдуь по-настоящему крутое и экстраординарное. Если в двух словах, то люблю творить.
+									Приветствую! Меня зовут Артём:) Я обожаю создавать и придумывать что-нибудь по-настоящему крутое и экстраординарное. Если в двух словах, то люблю творить.
 									<br><br>
 
 									Поэтому уже чуть более двух лет я с удовольствием занимаюсь версткой и веб-дизайном. Когда я начинал погружаться в эту сферу деятельности, то тогда я только поступал на первый курс Уральского Федерального университета на факультет радиотехнического института направления “Программная инженерия”. За период своего обучения приобрел навыки программирования на языках C#, Python, а также укрепил свои знания в верстке сайтов и улучшил навыки проектирования дизайнов приложений.<br><br>
@@ -114,8 +113,9 @@
 					</div>
 				</section>
 
+
 				<section id="skills" class="bg-desc blob-bg">
-					<div class="container ">
+					<div class="container">
 						<div class="row ">
 							<div class="col-md-12 ">
 								<span class="number-page">#02</span>
@@ -146,24 +146,27 @@
 							</div>
 						</div>
 						<div class="row padding">
-							<div class="tabs">
-				    <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
-				    <label for="tab-btn-1">Вкладка 1</label>
-				    <input type="radio" name="tab-btn" id="tab-btn-2" value="">
-				    <label for="tab-btn-2">Вкладка 2</label>
-				    <input type="radio" name="tab-btn" id="tab-btn-3" value="">
-				    <label for="tab-btn-3">Вкладка 3</label>
+							<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
 
-				    <div id="content-1">
-				      Содержимое 1...
-				    </div>
-				    <div id="content-2">
-				      Содержимое 2...
-				    </div>
-				    <div id="content-3">
-				      Содержимое 3...
-				    </div>
-				  </div> 
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
 					</div>
 				</section>
 				
@@ -171,7 +174,6 @@
 			
 	
 			<!-- Optional JavaScript -->
-			<script src="/js/canvas.js" type="text/javascript"></script>
 			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -180,39 +182,34 @@
 			<script src="https://kit.fontawesome.com/580ad5ec86.js" crossorigin="anonymous"></script>
 			<!-- Slick slide -->
 			<script type="text/javascript" src="slick/slick.min.js"></script>
+			<script src="/js/particles.js"></script>
 			<script>
-				(function($){				
-    jQuery.fn.lightTabs = function(options){
-        
-        var createTabs = function(){
-            tabs = this;
-            i = 0;
-            
-            showPage = function(i){
-                $(tabs).children("div").children("div").hide();
-                $(tabs).children("div").children("div").eq(i).show();
-                $(tabs).children("ul").children("li").removeClass("active");
-                $(tabs).children("ul").children("li").eq(i).addClass("active");
-            }
-            
-            showPage(0);				
-            
-            $(tabs).children("ul").children("li").each(function(index, element){
-                $(element).attr("data-page", i);
-                i++;                        
-            });
-            
-            $(tabs).children("ul").children("li").click(function(){
-                showPage(parseInt($(this).attr("data-page")));
-            });				
-        };		
-        return this.each(createTabs);
-    };	
-})(jQuery);
-$(document).ready(function(){
-    $(".tabs").lightTabs();
-});
-				</script>
+				particlesJS.load('particles-js', 'assets/particles.json', function() {
+				  console.log('callback - particles.js config loaded');
+				});
+			</script>
+			<script>
+				function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+			</script>
 
 		</body>
 	</html>

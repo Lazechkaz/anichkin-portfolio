@@ -68,7 +68,7 @@ li:last-child{
 /*---------------Navigation panel-------------*/
 
 /*---------------Main-------------*/
-canvas{
+.particles{
 	z-index: 0;
 	display: block;
  width: 100%;
@@ -85,7 +85,7 @@ canvas{
 /*	background: url(../img/bg.png) no-repeat center 50%/cover;
 */}
 #head{
-	padding: 150px 0px;
+	padding: 125px 0px;
 }
 .main-text h2{
 	font-size: 30px;	
@@ -312,53 +312,37 @@ canvas{
 }
 
 
-    .tabs {
-      font-size: 0;
-      max-width: 350px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
 
-    .tabs>input[type="radio"] {
-      display: none;
-    }
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
 
-    .tabs>div {
-      /* скрыть контент по умолчанию */
-      display: none;
-      border: 1px solid #e0e0e0;
-      padding: 10px 15px;
-      font-size: 16px;
-    }
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
 
-    /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
-    #tab-btn-1:checked~#content-1,
-    #tab-btn-2:checked~#content-2,
-    #tab-btn-3:checked~#content-3 {
-      display: block;
-    }
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
 
-    .tabs>label {
-      display: inline-block;
-      text-align: center;
-      vertical-align: middle;
-      user-select: none;
-      background-color: #f5f5f5;
-      border: 1px solid #e0e0e0;
-      padding: 2px 8px;
-      font-size: 16px;
-      line-height: 1.5;
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-      cursor: pointer;
-      position: relative;
-      top: 1px;
-    }
-
-    .tabs>label:not(:first-of-type) {
-      border-left: none;
-    }
-
-    .tabs>input[type="radio"]:checked+label {
-      background-color: #fff;
-      border-bottom: 1px solid #fff;
-    }
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
