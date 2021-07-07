@@ -16,38 +16,43 @@
 			<!-- Slick slider styles -->
 			<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 			<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+			<link rel="icon" href="img/favicon.ico">
 		</head>
 		<body>
 
 			<div id="particles-js" class="particles"></div>
 			<main class="main">
 				
-
-				<header class="toolbar">
-					<nav class="navbar navbar-expand-md navbar-light">
+				<header class="toolbar" id="navigation-panel">
+					<nav class="navbar navbar-expand-lg navbar-light">
 						<div class="container">
 					  <a class="navbar-brand" href="#">
 					   <img src="img/logo.svg" width="70" height="70" alt="логотипчик">
 					  </a>
-					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
-					    <span class="navbar-toggler-icon"></span>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации" onclick="myFunction(this)">
+					    <div class="bar1"></div>
+							  <div class="bar2"></div>
+							  <div class="bar3"></div>
 					  </button>
 						 <div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav ml-auto">
 			     	<li class="nav-item">
-			       <a class="navigator-link" href="#">Главная</a>
+			       <a class="navigator-link" href="#head">Главная</a>
 			      </li> 
 			      <li class="nav-item">
-			       <a class="navigator-link" href="#">Обо мне</a>
+			       <a class="navigator-link" href="#about">Обо мне</a>
 			      </li>
 			      <li class="nav-item">
-			       <a class="navigator-link" href="#">Мои навыки</a>
+			       <a class="navigator-link" href="#skills">Мои навыки</a>
 			      </li>
 			      <li class="nav-item">
-			       <a class="navigator-link" href="#">Портфолио</a>
+			       <a class="navigator-link" href="#technology">Технологии</a>
 			      </li>
 			      <li class="nav-item">
-			       <a class="navigator-link" href="#">Контакты</a>
+			       <a class="navigator-link" href="#portf">Портфолио</a>
+			      </li>
+			      <li class="nav-item">
+			       <a class="navigator-link" href="#contacts">Контакты</a>
 			      </li>
 				    </ul>
 							</div>
@@ -55,10 +60,12 @@
 					</nav>
 				</header>
 
-				<section id="head">
+				
+
+				<section id="head" class="head">
 					<div class="container">
-						<div class="row">
-							<div class="col-md-7">
+						<div class="row align-items-center">
+							<div class="col-lg-7">
 								<div class="main-text">
 									<h2>Привет!</h2>
 									<p class="head-text">Я - <span class="underline">Аничкин Артем,</span> дизайнер и разработчик вашего проекта.</p>
@@ -69,18 +76,20 @@
 									<p><span id="strip"></span>Дизайн мобильных приложений</p>
 									<p><span id="strip"></span>Front-end разработка</p>
 								</div>
-								<a href="#" class="button btn-portfolio">Мои работы</a>
-								<a href="#" class="button btn-about">Больше обо мне</a>
+								<div class="buttons">
+									<a href="#portf" class="button btn-portfolio mb-1">Мои работы</a>
+									<a href="#about" class="button btn-about">Больше обо мне</a>
+								</div>
 							</div>
-							<div class="pic-content col-md-5">
+							<div class="pic-content col-lg-5">
 								<img src="img/avatar.png" alt="Здесь должен быть я">
 								<span class="number-page whiteyellow">#00</span>
 								<div class="help-icons">
 									<span id="strip-vertical"></span>
 									<div class="social-icons">
-										<a href="#"><i class="fab fa-instagram"></i></a>
-										<a href="#"><i class="fab fa-vk"></i></a>
-										<a href="#"><i class="fab fa-telegram-plane"></i></a>
+										<a href="https://www.instagram.com/anichkinz" target="_blank"><i class="fab fa-instagram"></i></a>
+										<a href="https://vk.com/w1th0utarms" target="_blank"><i class="fab fa-vk"></i></a>
+										<a href="https://t.me/artemizyy" target="_blank"><i class="fab fa-telegram-plane"></i></a>
 									</div>
 								</div>
 							</div>
@@ -94,19 +103,19 @@
 							<div class="col-md-6">
 								<div class="about-rect">
 									<span class="number-page dark">#01</span>
-									<h3>Немного обо мне</h3>
+									<h3 class="title-yellow">Немного обо мне</h3>
 									<img src="img/test.png" alt="Здесь должен быть я">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<p class="about-text bg-desc trap">
-									Приветствую! Меня зовут Артём:) Я обожаю создавать и придумывать что-нибудь по-настоящему крутое и экстраординарное. Если в двух словах, то люблю творить.
+									Приветствую! Меня зовут Артём:) Я обожаю создавать и придумывать что-нибудь по-настоящему крутое и экстраординарное. Если в двух словах, то люблю творить. Поэтому уже чуть более двух лет я с удовольствием занимаюсь версткой и веб-дизайном.
 									<br><br>
 
-									Поэтому уже чуть более двух лет я с удовольствием занимаюсь версткой и веб-дизайном. Когда я начинал погружаться в эту сферу деятельности, то тогда я только поступал на первый курс Уральского Федерального университета на факультет радиотехнического института направления “Программная инженерия”. За период своего обучения приобрел навыки программирования на языках C#, Python, а также укрепил свои знания в верстке сайтов и улучшил навыки проектирования дизайнов приложений.<br><br>
+									 Активно начал увлекаться ui/ux дизайном, когда только поступал на первый курс Уральского Федерального университета на факультет радиотехнического института направления “Программная инженерия”, в котором обучаюсь и по сей день. За это увлекательное время в универе я приобрел навыки программирования на языках C#, Python, а также укрепил свои знания в верстке сайтов и улучшил навыки проектирования дизайнов приложений.<br><br>
 
-									Работал над разными проектами в универе и чаще всего в них выступал, как дизайнер или фронтенд разработчик.<br><br>
-									<a href="#">Взглянуть на мои работы</a>
+									 Принимал участие во множесте различных университетских проектах и чаще всего в них выступал, как проектировщик, дизайнер или фронтенд разработчик.<br><br>
+									<a class="text-ref" href="#portf">Взглянуть на мои работы <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 								</p>
 							</div>
 						</div>
@@ -115,64 +124,298 @@
 
 
 				<section id="skills" class="bg-desc blob-bg">
-					<div class="container">
-						<div class="row ">
+					<div class="container ">
+						<div class="row">
 							<div class="col-md-12 ">
-								<span class="number-page">#02</span>
-								<h3 class="semibold"><span class="headline">Мои навыки</span></h3>
-								<div class="row padding bg-desc trap-skill">
-									<div class="col-md-4">
-										<div class="skill">
-											<img src="img/imac.svg" alt="аймак">
-											<h4 class="skill-name semibold">UI/UX Дизайн</h4>
-											<p class="skill-descrip">Придумываю и воплощаю веб-дизайн, дизайн мобильных приложений для ios/android, прототипирую простые и удбные интерфейсы. Моя задача - комфорт и легкость для пользователя!</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="skill ">
-											<img src="img/icon.svg" alt="разработка">
-											<h4 class="skill-name semibold">Веб-разработка</h4>
-											<p class="skill-descrip ">При разработке использую актуальные и рабочие методы создания: последние версии библиотек и инструментов. Верстка без проблем поддерживается на любых устройствах.  Результат должен Вас впечатлить!</p>
-										</div>
-									</div>
-									<div class="col-md-4 ">
-										<div class="skill">
-											<img src="img/paint.svg" alt="краски">
-											<h4 class="skill-name semibold">Графичесикй дизайн</h4>
-											<p class="skill-descrip">Осуществляю проектировку и отрисовку логотипов, иконок, декоративных элементов. Цель -  эстетичность и элегантность!</p>
-										</div>
-									</div>
-								</div>							
+								<span class="number-page position-num">#02</span>
+								<h3 class="semibold"><span class="headline">Мои навыки</span></h3>							
 							</div>
 						</div>
-						<div class="row padding">
-							<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
+						<div class="row padding bg-desc trap-skill ">
+							<div class="col-md-4">
+								<div class="skill">
+									<img src="img/imac.svg" alt="аймак">
+									<h4 class="skill-name semibold">UI/UX Дизайн</h4>
+									<p class="skill-descrip">Придумываю и воплощаю веб-дизайн, дизайн мобильных приложений для ios/android, прототипирую простые и удбные интерфейсы. Моя задача - комфорт и легкость для пользователя!</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="skill ">
+									<img src="img/icon.svg" alt="разработка">
+									<h4 class="skill-name semibold">Веб-разработка</h4>
+									<p class="skill-descrip ">При разработке использую актуальные и рабочие методы создания: последние версии библиотек и инструментов. Верстка без проблем поддерживается на любых устройствах.  Результат должен Вас впечатлить!</p>
+								</div>
+							</div>
+							<div class="col-md-4 ">
+								<div class="skill">
+									<img src="img/paint.svg" alt="краски">
+									<h4 class="skill-name semibold">Графичесикй дизайн</h4>
+									<p class="skill-descrip">Осуществляю проектировку и отрисовку логотипов, иконок, декоративных элементов. Цель -  эстетичность и элегантность!</p>
+								</div>
+							</div>
+						</div>		
+					</div>
+				</section>
 
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
+				<section id="technology" class="bg-desc blob">
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<span class="number-page position-num z-ind">#03</span>
+									<h3 class="semibold z-ind"><span class="headline">Технологии</span></h3>							
+								</div>
+							</div>
+							<div class="tab-skill padding">
+						  <a id="defaultOpen" class="tablinks" onclick="openSkills(event, 'learned')">Изучено</a><span> /</span>
+						  <a id="notlnd" class="tablinks" onclick="openSkills(event, 'notlearned')">В изучении</a>
+							</div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+							<div id="learned" class="tabcontent">
+								<div class="row justify-content-center row-skills">
+									<div class="col-xl-3 col-lg-4 col-md-7 col-sm-8 col-10 cat">
+										<div class="category">
+											<div class="catalog">
+												<h4>Графические редакторы</h4>
+												<p>Figma, Adobe Photoshop</p>
+												<div class="icons-skills">
+													<img src="img/figma.svg" alt="">
+													<img src="img/Ps.svg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-7 col-sm-8 col-10 cat">
+										<div class="category">
+											<div class="catalog">
+												<h4>Веб-инструменты</h4>
+												<p>HTML, CSS, Bootstrap, JS</p>
+												<div class="icons-skills">
+													<img src="img/html5.svg" alt="">
+													<img src="img/css3-alt.svg" alt="">
+													<img src="img/bootstrap.svg" alt="">
+													<img src="img/js.svg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-7 col-sm-8 col-10 cat">
+										<div class="category">
+											<div class="catalog">
+												<h4>Языки программирования</h4>
+												<p>C#, Python</p>
+												<div class="icons-skills">
+													<img src="img/sharp.svg" alt="">
+													<img src="img/python.svg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row justify-content-center pages ">
+									<a  class="page" ></a>
+									<a id="unactive" class="page unactive" onclick="openSkills(event, 'notlearned')"></a>
+								</div>
+							</div>
+
+							<div id="notlearned" class="tabcontent">
+								<div class="row justify-content-center row-skills">
+									<div class="col-xl-3 col-lg-4 col-md-7 col-sm-8 col-10 cat">
+										<div class="category">
+											<div class="catalog">
+												<h4>Видеоредакторы</h4>
+												<p>Adobe AE, Adobe Premier</p>
+												<div class="icons-skills">
+													<img src="img/Ae.svg" alt="">
+													<img src="img/Pr.svg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-7 col-sm-8 col-10 cat">
+										<div class="category">
+											<div class="catalog">
+												<h4>3D-редакторы</h4>
+												<p>Cinema4D</p>
+												<div class="icons-skills">
+													<img src="img/4D.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row justify-content-center pages ">
+									<a id="unactive" class="unactive page" onclick="openSkills(event, 'learned')"></a>
+									<a id="act" class="page"></a>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+
+
+
+				<section id="portf" class="bg-desc polygon">
+					<div class="bg-desc triangle">
+						<div class="container">
+							<div class="row ">
+								<div class="col-lg-6">
+									<span class="number-page position-num">#04</span>
+									<h3 class="semibold"><span class="headline">Портфолио</span></h3>							
+								</div>
+							</div>
+
+							<div class="row padding">
+								<div class="col-lg-6 mb-4">
+									<div class="card">
+										<a href="page-coliseum.html" class="card-ref">
+											<div class="img-wrap">
+									  	<img src="img/coliseum.svg" class="card-img-top" alt="coliseum">
+									 	</div>
+									  <div class="card-body">
+									  	<h5 class="card-title">Сайт гостиницы “Колизей”</h5>
+									   <p class="card-text">Веб-разработка, UI/UX дизайн, Графический дизайн</p>
+							 			</div>
+						 			</a>
+									</div>							
+								</div>
+
+								<div class="col-lg-6 mb-4">
+									<div class="card">
+										<a href="page-flashlearn.html" class="card-ref">
+											<div class="img-wrap">
+									  	<img src="img/flashlearn.svg" class="card-img-top" alt="coliseum">
+									 	</div>
+									  <div class="card-body">
+									  	<h5 class="card-title">Приложение для изучения слов “FlashLearn”</h5>
+									   <p class="card-text">UI/UX дизайн, Графический дизайн</p>
+							 			</div>
+						 			</a>
+									</div>							
+								</div>
+
+								<div class="col-lg-6 mb-4">
+									<div class="card">
+										<a href="page-eventurfu.html" class="card-ref">
+											<div class="img-wrap">
+									  	<img src="img/urfu.svg" class="card-img-top" alt="coliseum">
+									 	</div>
+									  <div class="card-body">
+									  	<h5 class="card-title">Приложение для мероприятий УрФУ </h5>
+									   <p class="card-text">UI/UX дизайн, Графический дизайн</p>
+							 			</div>
+						 			</a>
+									</div>							
+								</div>
+
+								<div class="col-lg-6 mb-4">
+									<div class="card">
+										<a href="page-mvart.html" class="card-ref">
+											<div class="img-wrap">
+									  	<img src="img/mvart.svg" class="card-img-top" alt="coliseum">
+									 	</div>
+									  <div class="card-body">
+									  	<h5 class="card-title">Логотип для студии "MV ART"</h5>
+									   <p class="card-text">Графический дизайн</p>
+							 			</div>
+						 			</a>
+									</div>							
+								</div>
+
+								<div class="col-lg-6 mb-4">
+									<div id="hid" class="card hidden">
+										<a href="page-geophys.html" class="card-ref">
+											<div class="img-wrap">
+									  	<img src="img/geo.svg" class="card-img-top" alt="coliseum">
+									 	</div>
+									  <div class="card-body">
+									  	<h5 class="card-title">Лендинг для одного из направлений УрФУ</h5>
+									   <p class="card-text">Веб-разработка, UI/UX дизайн, Графический дизайн</p>
+							 			</div>
+						 			</a>
+									</div>							
+								</div>
+
+						</div>
+
+						<div id="button" class="row justify-content-center">
+								<a id="addButton" class="button more">Еще работы</a>
+							
+						</div>
+						
+					</div>
+				</section>
+
+				<section id="contacts">
+					<div class="container bg-desc vector-bg">
+						<div class="row">
+							<div class="col-md-6 ">
+								<span class="number-page">#05</span>
+								<h3 class="semibold"><span class="headline">Контакты</span></h3>
+
+								<div class="contact-data padding">
+									<div class="mobile">
+										<i class="fa fa-mobile" aria-hidden="true"></i>
+										<span class="contact-info">+7 (904) 161-77-35</span>
+									</div>
+									<div class="mail">
+										<i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<span class="contact-info">wizardtema@yandex.ru</span>
+									</div>
+									<div class="loaction">
+										<i class="fa fa-location-arrow" aria-hidden="true"></i>
+										<span class="contact-info">Россия, г. Екатеринбург</span>
+									</div>
+								</div>
+
+								<div class="col-12 social-media">
+									<p>Находите и добавляйте меня в социальных сетях</p>
+									<a href="https://www.instagram.com/anichkinz"><i class="fab fa-instagram"></i></a>
+									<a href="https://vk.com/w1th0utarms" target="_blank"><i class="fab fa-vk"></i></a>
+									<a href="https://t.me/artemizyy" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+									<a href="https://wapp.click/89041617735" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+								</div>
+
+								</div>
+								<div class="col-md-6 cont-form">
+									<span class="text-page dark">СВЯЗЬ СО МНОЙ</span>
+									<h3 class="title-yellow">Жду ваших предложений</h3>
+									<form class="email-me" action="">
+										<div class="form-group mb-4">
+	           <input type="email" name="email" class="form-field" id="email-id" placeholder="Ваш Email" required>
+	         </div>
+										<div class="form-group mb-4">
+	           <input type="text" name="ФИО" required class="form-field" id="recipient-name" placeholder="Ваше имя">
+	         </div>
+										<div class="form-group mb-4">
+									  <textarea class="form-field" placeholder="Введите сообщение" id="floatingTextarea2" style="height: 150px" required></textarea>
+										</div>
+										<div class="row justify-content-end">
+												<button type="submit" id="submit" class="btn-send">Отправить</button>
+										</div>
+									</form>
+								</div>
+						</div>
 					</div>
 				</section>
 				
+				<section id="footer" class="footer">
+					<div class="container">
+						<div class="row justify-content-center align-items-center">
+							<a class="navbar-brand" href="index.html"><img src="img/logof.svg" width="70" height="70" alt="логотипчик"></a>
+							<div>Сайт разработал Аничкин Артём
+								<div><i class="fa fa-copyright" aria-hidden="true"></i><span>2021. Все права защищены.</span></div>
+							</div>
+							
+						</div>
+					</div>
+				</section>
+					
 			</main>
 			
-	
+			<!-- MainScript -->
+
 			<!-- Optional JavaScript -->
 			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -182,34 +425,61 @@
 			<script src="https://kit.fontawesome.com/580ad5ec86.js" crossorigin="anonymous"></script>
 			<!-- Slick slide -->
 			<script type="text/javascript" src="slick/slick.min.js"></script>
+			<!-- Smooth Scroll -->
+			<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+			<!-- Particles-bg -->
 			<script src="js/particles.js"></script>
+			<!-- Main scripts -->
+			<script type="text/javascript" src="js/script.js"></script>
+
 			<script>
 				particlesJS.load('particles-js', 'assets/particles.json', function() {
 				  console.log('callback - particles.js config loaded');
 				});
 			</script>
+
 			<script>
-				function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
+				$(window).scroll(function () {
+			  if($(window).scrollTop() > 150) {
+			    
+			    $('#navigation-panel').css('background-color', 'rgba(255, 255, 255, 0.95)');
+			   } 
+			  else {
 
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+			   $('#navigation-panel').css('background-color', 'transparent');
+			   }
+				});
 			</script>
+			<script>
+				var btns = document.getElementById('addButton');
+				var par = document.getElementById('hid');
+				btns.onclick = function() {
+				  par.classList.remove("hidden");
+				  btns.style.display = "none";
+				}
+
+			</script>
+			<script>
+				function myFunction(x) {
+    	x.classList.toggle("change");
+				}
+			</script>
+			<script>
+		  window.onload = function () {
+		    document.body.classList.add('loaded_hiding');
+		    window.setTimeout(function () {
+		      document.body.classList.add('loaded');
+		      document.body.classList.remove('loaded_hiding');
+		    }, 500);
+		  }
+		</script>
 
 		</body>
+
+		<div class="loader">
+			<div class="preloader">
+	  	<hr><hr><hr><hr>
+			</div>
+		</div>
+
 	</html>
