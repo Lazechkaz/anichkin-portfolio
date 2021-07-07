@@ -1,0 +1,74 @@
+#technology{
+	padding: 100px 0px;
+}
+.row-skills div{
+
+}
+.category{
+	position: relative;
+	padding: 25px 15px;
+	background: linear-gradient(90deg, #262626 97%, #FEC62E 3%);
+	transform:skew(10deg);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	&:before, &:after{
+		content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background:#FEC62E;
+  transition: 0.5s;
+  z-index: -1;
+	}
+	&:hover:before, &:hover:after{
+		width: 100%;
+		transition:.5s;
+	}
+}
+.catalog{
+	transform: skew(-10deg);
+	color: #fff;
+	& h4{
+		font-size: 18px;
+		font-weight: 400;
+	}
+	& p, .icons-skills{
+		margin-top: 15px;
+		margin-left: 2px;
+	}
+	img{
+		margin-right: 5px;
+	}
+	&:last-child{
+		margin-right: 0px;
+	}
+}
+.blob:before{
+	top: 40%;
+	left: 0;
+	z-index: -1;
+	background: url(../img/blob.svg) no-repeat left;
+}
+
+.tab-skill{
+ padding-bottom: 20px;
+ 
+ & a{
+
+ 	text-decoration: none;
+ }
+}
+
+.tablinks{
+ 	color: #262626;
+ 	cursor: pointer;
+ 	font-size: 16px;
+ 	font-weight: 400;
+  &:hover{
+  	color:#FEC62E;
+  }
+}
+.tab-skill a.active{
+	color: #FEC62E;
+}
