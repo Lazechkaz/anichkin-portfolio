@@ -1,3 +1,39 @@
+var btns = document.getElementById('addButton');
+var par = document.getElementById('hid');
+  btns.onclick = function(){
+  console.log(par);
+  par.classList.remove("hidden");
+  btns.style.display = "none";
+}; 
+
+
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+
+$(window).scroll(function () {
+  if($(window).scrollTop() > 150) {
+    
+    $('#navigation-panel').css('background-color', 'rgba(255, 255, 255, 0.95)');
+   } 
+  else {
+
+   $('#navigation-panel').css('background-color', 'transparent');
+   }
+  });
+
+
+
+function myFunction(x) {
+  x.classList.toggle("change");
+    }
+  window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+};
 
 $(document).ready(function(){
   $('.img-slider').slick({

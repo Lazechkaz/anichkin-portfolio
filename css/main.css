@@ -2,6 +2,11 @@
 #head {
   padding: 200px 0px;
 }
+.toolbar{
+  background: rgba( 255, 255, 255, 0.7 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+}
 .main-text h2 {
   font-size: 30px;
 }
@@ -34,16 +39,14 @@
   margin-bottom: 50px;
 }
 .sub-text h4 {
-  font-size: 25px;
+  font-size: 16px;
 }
 .sub-text p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   padding-top: 15px;
 }
-.sub-text :nth-child(2) {
-  padding-top: 25px;
-}
+
 #strip {
   display: inline-block;
   width: 30px;
@@ -154,12 +157,13 @@
 }
 .about-text {
   margin-left: 50px;
+  font-size: 20px;
 }
 .about-text .text-ref {
   position: relative;
-  font-size: 16px;
+  font-size: 20px;
   text-decoration: none;
-  color: #FEC62E;
+  color: #f1b102;
 }
 .about-text .text-ref:before {
   content: '';
@@ -225,7 +229,7 @@
   padding-top: 120px;
 }
 .skill-name {
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 15px;
 }
 .skill-descrip {
